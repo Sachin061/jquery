@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery DAY-3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("#k1").click(function(){
+                $("p").fadeIn("slow");
+                $("img").fadeIn("slow");
+                $("video").fadeIn("slow");
+                $("#k1").attr("disabled",true);
+                $("#k2").attr("disabled",false);
+
+            });
+            $("#k2").click(function(){
+                $("p").fadeOut("slow");
+                $("img").fadeOut("slow");
+                $("video").fadeOut("slow");
+                $("#k2").attr("disabled",true);
+                $("#k1").attr("disabled",false);
+
+            });
+            $("#k3").click(function(){
+                $("p").fadeToggle("slow");
+                $("img").fadeIn("slow");
+                $("video").fadeIn("slow");
+            });
+
+        });
+    </script>
+    <style>
+        body{
+            background-color: crimson;
+        }
+        img:hover{
+            transform: rotate(360deg);
+            transition-duration: 3s;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>to fade in/fade out the text</h1>
+    <p style="display:none;">welcome guys</p><hr>
+    
+    <img style="display:none;" src="../internship1/ic1.png" alt="not available" height="200px" width="200px"><hr>
+    <video style="display:none;" src="../internship1/v1.mp4" height="400px" width="400px" autoplay controls></video><hr>
+    <button id="k1">fade in</button>
+    <button id="k2" disabled="true">fade out</button>
+    <button id="k3">fade toggle</button><hr>
+
+
+</body>
+</html>

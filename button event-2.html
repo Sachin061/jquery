@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery day-3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".k1").click(function(){
+
+                var H=parseInt($("img").css("height"));
+                if(H<=500){
+                    H+=50;
+                    $("img").css("height",H);
+                    $("img").css("width",H);
+
+                }
+                else{
+                    alert("you can not increase size greater then 500px");
+                }
+            });
+            $(".k2").click(function(){
+
+var H=parseInt($("img").css("height"));
+if(H>=100){
+    H-=10;
+    $("img").css("height",H);
+    $("img").css("width",H);
+
+}
+else{
+    alert("you can not decrease size of img less then 100");
+}
+});
+   $(".k3").click(function(){
+
+        $("img").fadeIn(5000);
+   });
+   
+        });
+    </script>
+</head>
+<body >
+    <img  src="../internship1/ic1.png" alt="not available" style="display:none;"><hr>
+    <img src="../internship1/ic2.png" alt="not available" style="display:none ;"><hr>
+    <img src="../internship1/ic3.png" alt="not available" style="display:none;"><hr>
+    <img id="i1" src="../internship1/backc.png" alt="not available" style="display:none;">
+    <button class="k1">+</button>
+    <button class="k2">-</button>
+    <button class="k3">click here</button>
+</body>
+</html>

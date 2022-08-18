@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first day of jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".k1").click(function(){
+                $("p").hide();
+            });
+            $(".k2").click(function(){
+                $("p").show();
+            });
+            $(".k3").click(function(){
+                $("img").hide();
+            });
+            $(".k4").click(function(){
+                $("img").show();
+            });
+            $(".k5").click(function(){
+                $("video").hide();
+            });
+            $(".k6").click(function(){
+                $("video").show();
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-color: grey;
+        }
+        h1{
+            color: red;
+            text-align:center;
+            text-decoration: underline;
+            text-underline-position: below;
+            text-decoration-color: black;
+
+        }
+        button{
+           
+            background-color: rgb(225, 70, 70);
+            border-bottom: 10px;
+        }
+        hr{
+            lighting-color: black;
+            background-color: black;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>JQUERY DAY 1</h1>
+    <p>hellow, welcome to my website!</p>
+    <p>first, we are hide the text</p>
+    <button class="k1">click here to hide</button>
+    <button class="k2">click here to show</button><hr>
+    <p>In this we hide the image.</p>
+    <img  src="../internship1/ic1.png" alt="picture is not loaded" style="height: 200px; width:200px; "><br>
+    <button class="k3">click here to hide img</button>
+    <button class="k4">click here to show img</button><hr>
+    <p>now we are hidding the video</p>
+    <video src="../internship1/v1.mp4" autoplay controls style="height:400px; width:400px;"></video><br>
+    <button class="k5">click to hide</button>
+    <button class="k6">click to show</button>
+ </body>
+</html>
